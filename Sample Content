@@ -1,0 +1,32 @@
+#!/bin/bash
+# Script to set up an Aztec Sequencer Node for the Testnet
+# Source: https://github.com/0xmoei/aztec-network[](https://github.com/0xmoei/aztec-network)
+
+# Prerequisites
+echo "Installing dependencies..."
+sudo apt update
+sudo apt install -y curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip
+
+# Set environment variables
+ETHEREUM_RPC_URL="YOUR_RPC_URL"
+VALIDATOR_PRIVATE_KEY="YOUR_PRIVATE_KEY"
+COINBASE="YOUR_ADDRESS"
+P2P_IP="YOUR_IP"
+
+# Pull and run the Aztec Docker image
+echo "Starting Aztec Sequencer Node..."
+docker run -d --name aztec-sequencer \
+  -e ETHEREUM_HOSTS=$ETHEREUM_RPC_URL \
+  -e VALIDATOR_PRIVATE_KEY=$VALIDATOR_PRIVATE_KEY \
+  -e COINBASE=$COINBASE \
+  -e P2P_IP=$P2P_IP \
+  -e LOG_LEVEL=debug \
+  -p 40400:40400/tcp -p 40400:40400/udp -p 8080:8080 \
+  -v /root/.aztec/alpha-testnet/data/:/data \
+  aztecprotocol/aztec:alpha-testnet
+
+# Check logs
+echo "Checking sequencer logs..."
+docker logs aztec-sequencer
+
+echo "Setup complete. Check https://aztecscan.xyz for node sync status."
