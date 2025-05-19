@@ -1,0 +1,23 @@
+
+#### 4. tools/aztec-tools.md
+**Description**: A file listing useful tools for Aztec Network development.
+
+**Sample Content**:
+```markdown
+# Tools for Aztec Network Development
+
+This file lists tools and utilities for building on the Aztec Network.
+
+- **Aztec CLI**: Command-line interface for starting the sandbox, deploying contracts, and interacting with the network.
+  - Install: `npm install -g @aztec/cli`
+- **Noir VS Code Extension**: Syntax highlighting and snippets for Noir.
+  - Install from VS Code Marketplace.
+- **Aztec Test Runner**: GitHub Action for running transaction execution tests in CI.
+  - See [AztecProtocol/awesome-aztec](https://github.com/AztecProtocol/awesome-aztec)[](https://github.com/AztecProtocol/awesome-aztec)
+- **Remix IDE Plugin**: Plugin for compiling and deploying Aztec contracts in Remix IDE.
+  - Available in Remix Plugin Marketplace.
+
+For more tools, check the [awesome-aztec repository](https://github.com/AztecProtocol/awesome-aztec).
+
+---
+Source: [AztecProtocol/awesome-aztec](https://github.com/AztecProtocol/awesome-aztec)[](https://github.com/AztecProtocol/awesome-aztec)
