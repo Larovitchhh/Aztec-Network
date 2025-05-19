@@ -1,0 +1,8 @@
+Topic Association: The aztec-network topic is already used on GitHub for repositories related to the Aztec Network (e.g., tutorials and documentation). Adding this topic ensures discoverability.
+
+Content Sources: The sample content is based on Aztec’s official GitHub repositories, documentation, and testnet guides. Always verify commands and configurations with the latest Aztec documentation, as testnet setups may change.
+
+Customization: You can expand the repository by adding more tutorials (e.g., private NFT marketplace), tools (e.g., custom scripts), or resources (e.g., community guides). Check AztecProtocol/awesome-aztec for inspiration.
+
+Security: Never include sensitive information (e.g., private keys) in public repositories. The .env file mentioned in some tutorials should be added to .gitignore.
+
