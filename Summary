@@ -1,0 +1,13 @@
+# Aztec Protocol Whitepaper Summary
+
+The Aztec Protocol is a zero-knowledge privacy protocol for Ethereum, enabling confidential transactions. Key concepts include:
+
+- **AZTEC Notes**: Encrypted representations of value (e.g., ERC-20 tokens) with an owner defined by an Ethereum address.
+- **Zero-Knowledge Proofs**: Used to validate transactions without revealing amounts, via homomorphic encryption and range proofs.
+- **ACE (Aztec Cryptography Engine)**: A smart contract that validates zero-knowledge proofs, allowing customizable and interoperable assets.
+- **Confidential Transactions**: Supports privacy for existing Ethereum assets, e.g., zkDai.
+
+For the full whitepaper, see [Aztec Documentation](https://docs.aztecprotocol.com).
+
+---
+Source: [AztecProtocol/aztec-v1](https://github.com/AztecProtocol/aztec-v1)[](https://github.com/AztecProtocol/aztec-v1)
