@@ -1,0 +1,13 @@
+# Setting Up the Aztec Sandbox
+
+The Aztec Sandbox is a local development environment for testing Aztec smart contracts and interacting with the Aztec Network. This guide walks you through the setup process.
+
+## Prerequisites
+- Node.js (v16 or later)
+- Yarn
+- Docker (for running the sandbox)
+
+## Steps
+1. **Install Aztec CLI**:
+   ```bash
+   npm install -g @aztec/cli
