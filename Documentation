@@ -1,0 +1,28 @@
+
+#### 3. tutorials/writing-aztec-contracts.md
+**Description**: A tutorial for writing smart contracts in Noir, Aztec’s privacy-focused smart contract language.
+
+**Sample Content**:
+```markdown
+# Writing Smart Contracts for Aztec Network
+
+Aztec uses [Noir](https://noir-lang.org), a domain-specific language for writing private smart contracts with zero-knowledge proofs. This tutorial introduces writing a simple Aztec contract.
+
+## Example: Private Counter Contract
+Below is a sample contract that maintains a private counter, incrementable only by the owner.
+
+```noir
+contract PrivateCounter {
+    private state counter: Field;
+    private state owner: AztecAddress;
+
+    fn initialize(initial_value: Field, owner: AztecAddress) {
+        counter = initial_value;
+        owner = owner;
+    }
+
+    fn increment() {
+        assert(msg.sender == owner, "Only owner can increment");
+        counter = counter + 1;
+    }
+}
